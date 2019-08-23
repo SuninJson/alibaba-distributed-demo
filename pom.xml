@@ -6,6 +6,7 @@
 
     <groupId>sen.demo</groupId>
     <artifactId>alibaba-distributed</artifactId>
+    <packaging>pom</packaging>
     <version>0.0.1-SNAPSHOT</version>
 
     <parent>
@@ -17,6 +18,8 @@
 
     <modules>
         <module>sentinel</module>
+        <module>kafka</module>
+        <module>zookeeper-spring-boot-starter</module>
     </modules>
 
     <properties>
