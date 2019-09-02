@@ -18,7 +18,8 @@
 
     <modules>
         <module>sentinel</module>
-        <module>kafka</module>
+        <module>kafka-producer</module>
+        <module>kafka-consumer</module>
         <module>zookeeper-spring-boot-starter</module>
     </modules>
 

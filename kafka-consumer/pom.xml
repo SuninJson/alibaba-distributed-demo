@@ -7,10 +7,11 @@
         <artifactId>alibaba-distributed</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <artifactId>kafka</artifactId>
+    <groupId>sen.kafka.demo</groupId>
+    <artifactId>consumer</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>kafka</name>
-    <description>Demo project for kafka</description>
+    <name>consumer</name>
+    <description>Demo project for Spring Boot</description>
 
     <properties>
         <java.version>1.8</java.version>
