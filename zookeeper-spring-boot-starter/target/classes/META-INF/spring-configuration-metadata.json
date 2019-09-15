@@ -1,0 +1,17 @@
+{
+  "groups": [
+    {
+      "name": "zookeeper",
+      "type": "com.sen.zookeeper.config.ZookeeperProperties",
+      "sourceType": "com.sen.zookeeper.config.ZookeeperProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "zookeeper.address",
+      "type": "java.lang.String",
+      "sourceType": "com.sen.zookeeper.config.ZookeeperProperties"
+    }
+  ],
+  "hints": []
+}
