@@ -7,19 +7,29 @@ import org.springframework.stereotype.Component;
 /**
  * @author Huang Sen
  */
-@Component
 public class ZookeeperUtil {
 
     private final CuratorFramework curatorFramework;
 
-    @Autowired
     public ZookeeperUtil(CuratorFramework curatorFramework) {
         this.curatorFramework = curatorFramework;
         this.curatorFramework.start();
     }
 
-    public void createNode(String nodePath, String value) throws Exception {
-        curatorFramework.create().creatingParentsIfNeeded().forPath(nodePath, value.getBytes());
+    public void createData(String nodePath, String dataValue) {
+        try {
+            curatorFramework.create().creatingParentsIfNeeded().forPath(nodePath, dataValue.getBytes());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void deleteData(String nodePath) {
+        try {
+            curatorFramework.delete().withVersion(0).forPath(nodePath);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
 }

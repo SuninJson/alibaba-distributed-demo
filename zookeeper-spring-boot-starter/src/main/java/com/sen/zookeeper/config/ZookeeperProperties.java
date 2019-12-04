@@ -9,7 +9,6 @@ import org.springframework.stereotype.Component;
  * @author Huang Sen
  */
 @Data
-@Component
 @ConfigurationProperties(prefix = "zookeeper")
 public class ZookeeperProperties {
 

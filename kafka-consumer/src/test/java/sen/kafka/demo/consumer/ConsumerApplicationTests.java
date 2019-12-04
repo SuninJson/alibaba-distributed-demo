@@ -1,7 +1,9 @@
 package sen.kafka.demo.consumer;
 
+import com.sen.zookeeper.util.ZookeeperUtil;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
@@ -9,8 +11,16 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest
 public class ConsumerApplicationTests {
 
+    @Autowired
+    private ZookeeperUtil zookeeperUtil;
+
     @Test
     public void contextLoads() {
+    }
+
+    @Test
+    public void testZkSPI(){
+        zookeeperUtil.createData("/kafka-consumer/test-node","Hello,I'm Kafka's consumer");
     }
 
 }

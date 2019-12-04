@@ -12,3 +12,5 @@ spring:
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
 
+zookeeper:
+  address: 139.155.81.220:2181

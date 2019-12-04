@@ -1,6 +1,5 @@
 package com.sen.zookeeper;
 
-import com.sen.zookeeper.config.ZookeeperConfig;
 import com.sen.zookeeper.util.ZookeeperUtil;
 import org.junit.Before;
 import org.junit.Test;
@@ -16,7 +15,9 @@ import org.springframework.test.context.junit4.SpringRunner;
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class CuratorDemo {
+public class ZookeeperUtilTest {
+
+    private final String CURATOR_DEMO_NODE = "/curatorDemo/node1";
 
     @Autowired
     private ZookeeperUtil zookeeperUtil;
@@ -27,11 +28,12 @@ public class CuratorDemo {
 
     @Test
     public void createNode() {
-        try {
-            zookeeperUtil.createNode("/curatorDemo/node1","helloCurator");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        zookeeperUtil.createData(CURATOR_DEMO_NODE, "helloCurator");
+    }
+
+    @Test
+    public void deleteNode() {
+        zookeeperUtil.deleteData(CURATOR_DEMO_NODE);
     }
 
 }
