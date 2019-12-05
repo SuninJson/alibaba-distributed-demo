@@ -9,7 +9,7 @@
 
     <parent>
         <groupId>sen.demo</groupId>
-        <artifactId>alibaba-distributed</artifactId>
+        <artifactId>microservice-demo</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
